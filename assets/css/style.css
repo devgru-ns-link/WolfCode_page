@@ -7,6 +7,8 @@ body {
   color: #fff;
 }
 
+
+
 a {
   color: #cda45e;
   text-decoration: none;
@@ -419,6 +421,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+
+
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.5);
@@ -431,7 +435,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .container {
   padding-top: 110px;
+    
 }
+
 
 @media (max-width: 992px) {
   #hero .container {
@@ -1014,11 +1020,31 @@ section {
 /*--------------------------------------------------------------
 # Ayudas
 --------------------------------------------------------------*/
-.ayudas {
-  background: url(../img/5.jpg) center center no-repeat;
-  background-size: cover;
-  position: relative;
+.ayudas{
+width: 100%;
+height: 1000px;
+background-image: url(../img/5.jpg);
+background-size:  100%;
+animation: movimiento 10s infinite linear alternate;
+position: relative;
+
 }
+.capa-gradient{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-linear-gradient(left, blank, 0672d0);
+  opacy: 0.5;
+}
+
+@keyframes movimiento{
+  from{
+    background-position: bottom left;
+  }to{
+    background-position: top right;
+  }
+} 
+
 
 .ayudas::before {
   content: '';
@@ -1035,8 +1061,10 @@ section {
 }
 
 .ayudas .container {
-  position: relative;
-}
+  position: relative;}
+ 
+
+
 
 @media (min-width: 1024px) {
   .events {
@@ -1108,12 +1136,26 @@ section {
 /*--------------------------------------------------------------
 # Registro
 --------------------------------------------------------------*/
-.registro
-{
-  background: url(../img/6.jpg) center center no-repeat;
-  background-size: cover;
-  position: relative;
+.registro {
+width: 100%;
+height: 700px;
+background-image: url(../img/6.jpg);
+background-size:  100%;
+animation: movimiento 8s infinite linear alternate-reverse;
+
 }
+
+@keyframes movimiento{
+  from{
+    background-position: bottom;
+  }to{
+    background-position: top;
+  }
+}
+/*------------------------------------------------------------------
+fin imágen movil
+--------------------------------------------------------------------*/
+
 .registro .php-email-form {
   width: 100%;
 }
